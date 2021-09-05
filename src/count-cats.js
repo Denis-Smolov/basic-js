@@ -12,16 +12,13 @@
  * ]) => 3`
  *
  */
-
-const CAT = '^^';
-
-function countCats(matrix) {
+export default function countCats(matrix) {
     const length = matrix.length;
     let result = 0;
 
     for (let i = 0; i < length; i++) {
         for (let j = 0; j < length; j++) {
-            if (matrix[i][j] === CAT) {
+            if (matrix[i][j] === '^^') {
                 result++;
             }
         }
@@ -30,4 +27,4 @@ function countCats(matrix) {
     return result;
 }
 
-countCats([[0, 1, '^^'], [0, '^^', 2], ['^^', 1, 2]]);
+// countCats([[0, 1, '^^'], [0, '^^', 2], ['^^', 1, 2]]);
