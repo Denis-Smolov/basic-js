@@ -7,19 +7,23 @@ const ERROR_TEXT = 'You can\'t remove incorrect link!';
 /**
  * Implement chainMaker object according to task description
  */
-export default {
-    // chainLinks,
+export default class ChainMaker {
+// class ChainMaker {
+    chainLinks;
 
-    // constructor() {
-    //     this.chainLinks = [];
-    // },
+    constructor() {
+        this.chainLinks = [];
+    }
+
     getLength() {
         return this.chainLinks.length;
-    },
+    };
+
     addLink(value) {
         this.chainLinks.push(value === undefined ? '*' : value);
         return this;
-    },
+    };
+
     removeLink(position) {
         if (position === null || position === undefined || Number.isNaN(position) || !Number.isInteger(position)
             || position < 0 || position > this.getLength()) {
@@ -27,7 +31,8 @@ export default {
         }
         this.chainLinks.splice(position - 1, 1);
         return this;
-    },
+    };
+
     reverseChain() {
         let reversed = [];
 
@@ -36,7 +41,8 @@ export default {
         }
         this.chainLinks = reversed;
         return this;
-    },
+    };
+
     finishChain() {
         let result = '';
         for (let i = 0; i < this.getLength(); i++) {
@@ -48,9 +54,10 @@ export default {
         }
         this.chainLinks = [];
         return result;
-    }
-};
-/*
+    };
+}
+/**//*
+
 class ChainMaker {
     chainLinks;
 
@@ -100,15 +107,13 @@ class ChainMaker {
     }
 }
 */
-// let chainMaker = new ChainMaker();
 
+// let chainMaker = new ChainMaker();
 // console.log(chainMaker.addLink().addLink(2).addLink().finishChain()); // => '( )~~( 2 )~~( )'
 // console.log(chainMaker.addLink(1).addLink(2).addLink(3).finishChain()); // => '( 1 )~~( 2 )~~( 3 )'
 // console.log(chainMaker.addLink(1).addLink(2).removeLink(1).addLink(3).finishChain()); // => '( 2 )~~( 3 )'
-
 // chainMaker.addLink(1).addLink(2).reverseChain().addLink(3);
 // console.log(chainMaker.getLength());
 // chainMaker.finishChain();
 // console.log(chainMaker.addLink(1).addLink(2).reverseChain().addLink(3).finishChain()); // => '( 2 )~~( 1 )~~( 3 )'
-
-// console.log(chainMaker.addLink(1).addLink(2).removeLink(3).addLink(3).finishChain());
+// console.log(chainMaker.addLink(1).addLink(2).removeLink(9).addLink(3).finishChain());
