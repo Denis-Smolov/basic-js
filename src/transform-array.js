@@ -68,5 +68,6 @@ export default function transform(arr) {
 // console.log(JSON.stringify([1, 2, 4, 5]) === JSON.stringify(transform([1, 2, 3, '--discard-prev', 4, 5])));
 // console.log(JSON.stringify([1, 2, 3, 5]) === JSON.stringify(transform([1, 2, 3, '--discard-next', 4, 5])));
 // console.log(JSON.stringify([1, 2, 3, 3, 4, 5]) === JSON.stringify(transform([1, 2, 3, '--double-prev', 4, 5])));
-
-console.log(JSON.stringify([1, 2, 3, 4, 4]) === JSON.stringify(transform([1, 2, 3, '--double-next', 4, '--discard-next', 5])));
+// console.log(JSON.stringify([1, 2, 3, 4, 4]) === JSON.stringify(transform([1, 2, 3, '--double-next', 4, '--discard-next', 5])));
+// console.log(JSON.stringify([1, 3, 4, 5]) === JSON.stringify(transform([1, '--discard-next', 2, '--discard-prev', 3, 4, 5])));
+// console.log(JSON.stringify([2, 4, 5]) === JSON.stringify(transform([1, '--discard-prev', 2, '--discard-next', 3, 4, 5])));
