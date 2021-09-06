@@ -4,26 +4,25 @@ const LINK_3 = ')';
 const LINK_4 = ' )';
 const ERROR_TEXT = 'You can\'t remove incorrect link!';
 
-let chainLinks;
-
 /**
  * Implement chainMaker object according to task description
  */
-export default {
-    chainLinks,
+export default class ChainMaker {
+// class ChainMaker {
+    chainLinks;
 
     constructor() {
         this.chainLinks = [];
-    },
+    }
 
     getLength() {
         return this.chainLinks.length;
-    },
+    };
 
     addLink(value) {
         this.chainLinks.push(value === undefined ? '*' : value);
         return this;
-    },
+    };
 
     removeLink(position) {
         if (position === null || position === undefined || Number.isNaN(position) || !Number.isInteger(position)
@@ -32,7 +31,7 @@ export default {
         }
         this.chainLinks.splice(position - 1, 1);
         return this;
-    },
+    };
 
     reverseChain() {
         let reversed = [];
@@ -42,7 +41,7 @@ export default {
         }
         this.chainLinks = reversed;
         return this;
-    },
+    };
 
     finishChain() {
         let result = '';
@@ -55,7 +54,7 @@ export default {
         }
         this.chainLinks = [];
         return result;
-    }
+    };
 }
 /**//*
 
