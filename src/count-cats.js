@@ -12,7 +12,14 @@
  * ]) => 3`
  *
  */
+
+const ZERO = 0;
+
 export default function countCats(matrix) {
+    if (!Array.isArray(matrix) || matrix.length === ZERO) {
+        return false;
+    }
+
     const length = matrix.length;
     let result = 0;
 
@@ -27,4 +34,11 @@ export default function countCats(matrix) {
     return result;
 }
 
-// countCats([[0, 1, '^^'], [0, '^^', 2], ['^^', 1, 2]]);
+let z;
+z = countCats([[0, 1, '^^'], [0, '^^', 2], ['^^', 1, 2]]);
+console.log(Number.isInteger(z));
+console.log(z);
+
+z = countCats([[0, 1, 3], [0, 5, 2], [9, 1, 2]]);
+console.log(Number.isInteger(z));
+console.log(z);
