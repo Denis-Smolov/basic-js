@@ -10,9 +10,9 @@ const ERROR_TEXT = 'You can\'t remove incorrect link!';
 export default {
     // chainLinks,
 
-    constructor() {
-        this.chainLinks = [];
-    },
+    // constructor() {
+    //     this.chainLinks = [];
+    // },
     getLength() {
         return this.chainLinks.length;
     },
