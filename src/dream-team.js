@@ -16,7 +16,7 @@ const ZERO = 0;
 const STRING = "string";
 
 export default function createDreamTeam(members) {
-    if (!Array.isArray(members) || members.length === ZERO) {
+    if (!Array.isArray(members) /*|| members.length === ZERO*/) {
         return false;
     }
 
