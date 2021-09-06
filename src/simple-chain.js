@@ -8,7 +8,7 @@ const ERROR_TEXT = 'You can\'t remove incorrect link!';
  * Implement chainMaker object according to task description
  */
 export default {
-    chainLinks,
+    // chainLinks,
 
     constructor() {
         this.chainLinks = [];
