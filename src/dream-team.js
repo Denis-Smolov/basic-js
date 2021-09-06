@@ -16,14 +16,14 @@ const ZERO = 0;
 const STRING = "string";
 
 export default function createDreamTeam(members) {
-    if (!Array.isArray(members) /*|| members.length === ZERO*/) {
+    if (!Array.isArray(members) || members.length === ZERO) {
         return false;
     }
 
     let letters = [];
 
     members.forEach(function (item) {
-        if (STRING === typeof item) {
+        if (STRING === typeof item && item.length > ZERO) {
             letters.push(item.charAt(ZERO).toUpperCase());
         }
     });
