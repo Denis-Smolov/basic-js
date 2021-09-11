@@ -20,11 +20,10 @@ export default function countCats(matrix) {
         return false;
     }
 
-    const length = matrix.length;
     let result = 0;
 
-    for (let i = 0; i < length; i++) {
-        for (let j = 0; j < length; j++) {
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
             if (matrix[i][j] === '^^') {
                 result++;
             }
@@ -34,11 +33,11 @@ export default function countCats(matrix) {
     return result;
 }
 
-let z;
+/*let z;
 z = countCats([[0, 1, '^^'], [0, '^^', 2], ['^^', 1, 2]]);
 console.log(Number.isInteger(z));
 console.log(z);
 
 z = countCats([[0, 1, 3], [0, 5, 2], [9, 1, 2]]);
 console.log(Number.isInteger(z));
-console.log(z);
+console.log(z);*/
